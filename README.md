@@ -15,3 +15,9 @@ uvicorn main:app --reload
 ```
 * visit http://127.0.0.1:8000/docs
 
+## Login data
+you can use this pre-defined user
+```
+username: user@example.com
+password: password
+```

@@ -25,7 +25,7 @@ class NotesRepository(Repository):
         stmt = text(
             "SELECT * FROM notes WHERE uuid=:uuid" + trashed
         )
-        result = self.db.execute(stmt, uuid=uuid).fetchone()
+        result = self.db.execute(stmt, uuid=str(uuid)).fetchone()
         if (result):
             return Note(**result)
         return None
